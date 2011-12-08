@@ -1,0 +1,5 @@
+Usage: bundle exec ruby #{__FILE__} <addresses.csv> <invites.txt>
+
+ - selects the rows from addresses.csv where people chose to participate in beta
+ - adds the 'invite' column and picks an invite from <invites.txt>
+ - outputs to stdout
