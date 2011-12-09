@@ -23,7 +23,10 @@ csv_filename, invites_filename = ARGV[0], ARGV[1]
 invites = File.readlines(invites_filename)
 table = FasterCSV.read(csv_filename, :headers => true)
 
-table.delete_if { |row| row["Are you interested in Beta-testing UltraTradr?"] !~ /^Yes/ }
+
+## No, Mike wants to send it to everyone
+
+#table.delete_if { |row| row["Are you interested in Beta-testing UltraTradr?"] !~ /^Yes/ }
 
 table.each { |row| row["invite"] = invites.shift.chomp }
 
